@@ -4,12 +4,15 @@ autoload -Uz promptinit
 promptinit
 #prompt fade blue
 setopt PROMPT_SUBST
-PS1='%B%F{red}[%f%F{yellow}%n%f%F{green}@%f%F{blue}%m%f %F{magenta}%~%f%F{red}]%f$ %b'
+PS1='%B%F{yellow}[%f%F{#A52A2A}%n%f%F{green}@%f%F{#43C6DB}%m%f %F{blue}%~%f%F{yellow}]%f%F{#C0C0C0}$%f %b'
+#PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b '
+autoload -U compinit
+compinit
+setopt autocd #Allows you to cd into directory merely by typing the directory name.
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
