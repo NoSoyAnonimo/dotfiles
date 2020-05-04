@@ -8,6 +8,11 @@ Si bien acá tengo mis configuraciones de i3-gaps y bspwm, tengo que dejar en cl
 
 Mi versión editada de dwm la pueden encontrar en mi mismo repositorio.
 
+Cualquier duda o comentario acerca de esta configuración, pueden hacerla a los siguientes correos:
+
+vim.latex.espanol@gmail.com
+enemigosdekarmatron@gmail.com
+
 ## Configuraciones:
 
 **Configuraciones que ya no utilizo**
