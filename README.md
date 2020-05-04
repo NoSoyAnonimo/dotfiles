@@ -36,3 +36,4 @@ Cualquier duda o comentario acerca de esta configuración, pueden hacerla a los 
 - sxhkd (Configuración de teclas simple, la cual se puede estandarizar para varios manejadores de ventana. Pero me simplifica la definición de combinaciones de teclas en dwm).
 - zathura
 - nvim
+- Ahora agregado .vimrc
