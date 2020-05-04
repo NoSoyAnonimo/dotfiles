@@ -137,8 +137,9 @@ set clipboard=unnamedplus
 	" Word count:
 	autocmd FileType tex map <leader>w :w !detex \| wc -w<CR>
 	" Code snippets
-	autocmd FileType tex,rmd map -p :!evince <c-r>%<backspace><backspace><backspace>pdf&<CR><CR>
-	autocmd FileType tex nnoremap ,pl :-1read $HOME/.config/.plantilla.tex<CR>
+	autocmd FileType tex nnoremap ,plx :-1read $HOME/.config/.plantillax.tex<CR>
+	autocmd FileType tex nnoremap ,plp :-1read $HOME/.config/.plantilla.tex<CR>
+	autocmd FileType tex nnoremap ,plb :-1read $HOME/.config/.plantillab.tex<CR>
 	autocmd FileType tex inoremap ,fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
 	"autocmd FileType tex inoremap ,fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
 	autocmd FileType tex inoremap ,fi \begin{figure}<Enter>\centering<Enter>\includegraphics{<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Enter><Enter><++><Esc>3kA
@@ -233,6 +234,7 @@ set clipboard=unnamedplus
 "MARKDOWN
 	autocmd FileType markdown map -p :!evince <c-r>%<backspace><backspace>pdf&<CR><CR>
 	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
+	autocmd FileType markdown,rm nnoremap ,pl :-1read $HOME/.config/.plantillamd<CR>
 	autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
 	autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
 	autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
