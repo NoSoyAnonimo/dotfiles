@@ -10,8 +10,10 @@ Mi versión editada de dwm la pueden encontrar en mi mismo repositorio.
 
 Cualquier duda o comentario acerca de esta configuración, pueden hacerla a los siguientes correos:
 
-vim.latex.espanol@gmail.com
-enemigosdekarmatron@gmail.com
+- vim.latex.espanol[at]gmail.com
+- enemigosdekarmatron[at]gmail.com
+
+(Obviamente cambien [at] por una @ )
 
 ## Configuraciones:
 
