@@ -19,12 +19,14 @@ Cualquier duda o comentario acerca de esta configuración, pueden hacerla a los 
 
 **Configuraciones que ya no utilizo**
 
-- bspwm
 - i3
 - i3blocks
-- polybar (Se puede configurar en bspwm o en i3)
 
 **Configuraciones útiles:**
+
+- bspwm
+
+- Polybar (se puede usar en i3 o en bspwm)
 
 - Música
     - mpd
