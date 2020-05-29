@@ -1,0 +1,2 @@
+#!/bin/sh
+fzf | xargs -I {} rifle "{}"

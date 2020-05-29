@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true; do
+    killall dwmblocks
+    dwmblocks
+    sleep 5m
+done

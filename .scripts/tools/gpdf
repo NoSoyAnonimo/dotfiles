@@ -1,0 +1,9 @@
+#!/bin/sh
+
+file=$(readlink -f "$1")
+dir=$(dirname "$file")
+base="${file%.*}"
+bases="${1%.*}"
+
+md2roff $file --mom > $base.mom
+md2roff $file --mom | preconv | groff -Tpdf > $base.pdf

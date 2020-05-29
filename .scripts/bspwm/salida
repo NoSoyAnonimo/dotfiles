@@ -1,0 +1,5 @@
+#!/bin/sh
+
+killall sxhkd -9
+killall polybar -9
+killall bspwm -9

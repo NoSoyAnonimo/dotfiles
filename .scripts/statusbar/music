@@ -1,0 +1,24 @@
+#!/bin/sh
+
+filter() {
+    t=$(mpc status | grep playing | awk '{print $3}')
+    s=$(mpc status | filter1)
+    echo '['$t']' $s
+}
+filter1() {
+	mpc status | head -n 1 | grep -v volume
+	}
+
+case $BLOCK_BUTTON in
+    1) mpc status | filter1 && setsid "$TERMINAL" -e ncmpcpp & ;;  # right click, pause/unpause
+    2) mpc toggle | filter1 ;;  # right click, pause/unpause
+    3) mpc status | filter1 && pgrep -x dunst >/dev/null && notify-send "🎵 Music module" "\- Shows mpd song playing.
+- Italic when paused.
+- Left click opens ncmpcpp1.
+- Middle click pauses.
+- Scroll changes track.";;  # right click, pause/unpause
+    4) mpc prev   | filter1 ;;  # scroll up, previous
+    5) mpc next   | filter1 ;;  # scroll down, next
+    #*) filter ;;
+    *) mpc status | filter1 ;;
+esac; exit

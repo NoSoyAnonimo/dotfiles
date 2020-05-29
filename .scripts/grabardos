@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This script records a screencast with audio and video.
+# It runs an appropriate record script for either ALSA and Pulseaudio.
+# It also names files smartly to prevent overwrites.
+
+# Picks a file name for the output file based on availability:
+#-f pulse -ac 2 -ar 48000 -i alsa_input.pci-0000_00_1b.0.analog-stereo \
+#-f pulse -ac 2 -ar 48000 -i alsa_input.pci-0000_00_1b.0.analog-stereo \
+
+ffmpeg -y \
+    -f pulse -ac 2 -ar 44100 -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor \
+    -f pulse -ac 2 -ar 48000 -i noechosource \
+    -filter_complex amix=inputs=2 \
+    -acodec libmp3lame -ab 64k -ac 1\
+    -content_type audio/mpeg -f mp3 \
+    "$HOME/audio-$(date '+%y%m%d-%H%M-%S').mp3"

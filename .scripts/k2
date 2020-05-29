@@ -1,0 +1,3 @@
+#!/bin/sh
+killall kd -9
+kd

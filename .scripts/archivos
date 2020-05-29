@@ -1,0 +1,11 @@
+#!/bin/sh
+
+archivo=$(readlink -f "$1")
+dir=$(dirname "$archivo")
+base="${archivo%.*}"
+bases="${1%.*}"
+
+echo "Archivo con carpeta: $archivo"
+echo "Directorio: $dir"
+echo "Base con directorio sin extensión: $base"
+echo "Nombre sin extensión: $bases"

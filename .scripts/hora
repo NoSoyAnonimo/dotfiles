@@ -1,0 +1,8 @@
+#!/bin/bash
+
+clima=" | $(weather)"
+
+while true; do
+    xsetroot -name "$clima | $(date '+%Y %b %d (%a)  %I:%M%p')"
+    sleep 1m
+done
